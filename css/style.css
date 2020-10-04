@@ -13,7 +13,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
 1em = 16px
 */
 :root {
-  --color-primary: black; }
+  --color-background: #f7f7f7;
+  --color-text: #404040;
+  --color-background-dark: #231831; }
 
 /*
 Perform basic CSS reset so that every browser displays CSS
@@ -50,3 +52,9 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 6rem; }
+
+.header {
+  position: sticky;
+  top: 0;
+  background-color: orangered;
+  height: 60vh; }
