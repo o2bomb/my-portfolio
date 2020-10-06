@@ -6,33 +6,27 @@ body {
   color: var(--color-text);
 }
 
-h1, h2, h3, h4, h5, h6 {
-  display: inline-block;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Montserrat", sans-serif;
-
-  // For animating the underline
-  overflow: hidden;
-  position: relative;
+  
   &:hover {
     cursor: pointer;
-
-    &:after {
-      left: 0;
-      width: 100%;
-      opacity: 1;
-    }
+    background-size: 0 10%, 100% 10%;
   }
 
-  &:after {
-    position: absolute;
-    content: "";
-    bottom: 0;
-    width: 0;
-    height: 10%;
-    opacity: 0;
-    transition: all 0.2s;
-    background-color: var(--color-text);
-  }
+  // For animating the underline
+  display: inline;
+  background-image: linear-gradient(var(--color-background), var(--color-background)), linear-gradient(var(--color-text), var(--color-text));
+  background-size: 100% 10%, 0 10%;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat, no-repeat;
+
+  transition: background-size .2s;
 }
 
 h1 {
@@ -41,4 +35,22 @@ h1 {
 
 h2 {
   font-size: 4rem;
+}
+
+a {
+  &:link {
+    color: var(--color-background);
+    text-decoration: none;
+  }
+
+  &:visited {
+    color: var(--color-tertiary);
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active {
+  }
 }
