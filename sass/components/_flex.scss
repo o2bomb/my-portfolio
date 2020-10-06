@@ -1,11 +1,15 @@
 .flex {
-    display: flex;
+  display: flex;
 
-    &.wrap {
-        flex-wrap: wrap;
-    }
+  &.wrap {
+    flex-wrap: wrap;
+  }
 
-    &.space-between {
-        justify-content: space-evenly;
-    }
+  &.space-between {
+    justify-content: space-evenly;
+  }
+
+  &.center {
+    align-items: center;
+  }
 }
