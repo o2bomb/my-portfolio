@@ -20,6 +20,7 @@ h6 {
   }
 
   // For animating the underline
+  // https://nickymeuleman.netlify.app/blog/css-animated-wrapping-underline
   display: inline;
   background-image: linear-gradient(var(--color-background), var(--color-background)), linear-gradient(var(--color-text), var(--color-text));
   background-size: 100% 10%, 0 10%;
