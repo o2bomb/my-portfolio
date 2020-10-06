@@ -1,10 +1,10 @@
 .card {
-  height: 24rem;
   width: 40rem;
   color: var(--color-background);
   background-color: var(--color-text);
   border-radius: 1rem;
-  margin: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   padding: 1rem 2rem;
 
   transition: transform .2s;
@@ -19,19 +19,55 @@
 
   .title {
     font-weight: 700;
+
+    &:hover {
+      a .project-link {
+        width: 2rem;
+        height: 2rem;  
+      }
+    }
+
+    .project-link {
+      width: 0;
+      height: 0;
+      fill: var(--color-background);
+
+      transition: all .2s;
+    }
   }
 
   .description {
     color: var(--color-secondary);
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
   }
 
   .flex .badge {
+    margin-top: 1rem;
     &:not(:last-child) {
       margin-right: 1rem;
+    }
+  }
+
+  &-footer {
+    display: flex;
+    justify-content: flex-end;
+
+    &:hover {
+      a .project-link {
+        width: 2rem;
+        height: 2rem;  
+      }
+    }
+
+    .project-link {
+      width: 0;
+      height: 0;
+      fill: var(--color-background);
+
+      transition: all .2s;
     }
   }
 }
