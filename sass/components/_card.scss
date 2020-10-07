@@ -7,7 +7,7 @@
   margin-bottom: 1rem;
   padding: 1rem 2rem;
 
-  transition: transform .2s;
+  transition: transform 0.2s;
 
   .flex &:not(:last-child) {
     margin-right: 1rem;
@@ -15,25 +15,26 @@
 
   &:hover {
     transform: translateY(-1rem);
+
+    .title,
+    .card-footer {
+      a .project-link {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+
+  .project-link {
+    width: 0;
+    height: 0;
+    fill: var(--color-background);
+
+    transition: all 0.2s;
   }
 
   .title {
     font-weight: 700;
-
-    &:hover {
-      a .project-link {
-        width: 2rem;
-        height: 2rem;  
-      }
-    }
-
-    .project-link {
-      width: 0;
-      height: 0;
-      fill: var(--color-background);
-
-      transition: all .2s;
-    }
   }
 
   .description {
@@ -54,20 +55,5 @@
   &-footer {
     display: flex;
     justify-content: flex-end;
-
-    &:hover {
-      a .project-link {
-        width: 2rem;
-        height: 2rem;  
-      }
-    }
-
-    .project-link {
-      width: 0;
-      height: 0;
-      fill: var(--color-background);
-
-      transition: all .2s;
-    }
   }
 }
