@@ -1,6 +1,10 @@
 .flex {
   display: flex;
 
+  &.column {
+    flex-direction: column;
+  }
+
   &.wrap {
     flex-wrap: wrap;
   }
@@ -9,7 +13,7 @@
     justify-content: space-evenly;
   }
 
-  &.center {
-    align-items: center;
+  &.horizontal-center {
+    justify-content: center;
   }
 }
