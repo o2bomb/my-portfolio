@@ -55,21 +55,26 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Montserrat", sans-serif;
-  display: inline;
-  background-image: linear-gradient(var(--color-background), var(--color-background)), linear-gradient(var(--color-text), var(--color-text));
-  background-size: 100% 10%, 0 10%;
-  background-position: 100% 100%, 0 100%;
-  background-repeat: no-repeat, no-repeat;
-  transition: background-size .2s; }
-  h1:hover,
-  h2:hover,
-  h3:hover,
-  h4:hover,
-  h5:hover,
-  h6:hover {
-    cursor: pointer;
-    background-size: 0 10%, 100% 10%; }
+  font-family: "Montserrat", sans-serif; }
+  h1.underline-hover,
+  h2.underline-hover,
+  h3.underline-hover,
+  h4.underline-hover,
+  h5.underline-hover,
+  h6.underline-hover {
+    display: inline;
+    background-image: linear-gradient(var(--color-background), var(--color-background)), linear-gradient(var(--color-text), var(--color-text));
+    background-size: 100% 10%, 0 10%;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat, no-repeat;
+    transition: background-size .2s; }
+    h1.underline-hover:hover,
+    h2.underline-hover:hover,
+    h3.underline-hover:hover,
+    h4.underline-hover:hover,
+    h5.underline-hover:hover,
+    h6.underline-hover:hover {
+      background-size: 0 10%, 100% 10%; }
 
 h1 {
   font-size: 10rem; }
