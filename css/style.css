@@ -67,7 +67,7 @@ h6 {
     background-size: 100% 10%, 0 10%;
     background-position: 100% 100%, 0 100%;
     background-repeat: no-repeat, no-repeat;
-    transition: background-size .2s; }
+    transition: background-size 0.2s; }
     h1.underline-hover:hover,
     h2.underline-hover:hover,
     h3.underline-hover:hover,
@@ -92,9 +92,18 @@ a:visited {
 a:hover {
   text-decoration: underline; }
 
+ul {
+  list-style-position: inside; }
+
+header {
+  padding: 0 2rem; }
+
 main section {
   margin: 3rem 0;
   padding: 0 2rem; }
+
+.description {
+  margin: 1rem 0; }
 
 .flex {
   display: flex; }
