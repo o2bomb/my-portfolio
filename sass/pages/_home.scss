@@ -1,5 +1,11 @@
 header {
   padding: 0 2rem;
+
+  .flex {
+    .contact-link:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
 }
 
 main {

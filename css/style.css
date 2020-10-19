@@ -83,7 +83,7 @@ h2 {
   font-size: 4rem; }
 
 a:link {
-  color: var(--color-background);
+  color: var(--color-text);
   text-decoration: none; }
 
 a:visited {
@@ -92,11 +92,16 @@ a:visited {
 a:hover {
   text-decoration: underline; }
 
+a.inverted:link {
+  color: var(--color-background); }
+
 ul {
   list-style-position: inside; }
 
 header {
   padding: 0 2rem; }
+  header .flex .contact-link:not(:last-child) {
+    margin-right: 1rem; }
 
 main section {
   margin: 3rem 0;
