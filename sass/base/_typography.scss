@@ -45,7 +45,7 @@ h2 {
 
 a {
   &:link {
-    color: var(--color-background);
+    color: var(--color-text);
     text-decoration: none;
   }
 
@@ -58,6 +58,12 @@ a {
   }
 
   &:active {
+  }
+
+  &.inverted {
+    &:link {
+      color: var(--color-background);
+    }
   }
 }
 
