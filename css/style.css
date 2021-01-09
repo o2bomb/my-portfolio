@@ -17,7 +17,8 @@ ORDER: Base + typography > general layout + grid > page layout > components
   --color-secondary: #64878F;
   --color-tertiary: #3C6B94;
   --color-background: #C6B9A7;
-  --color-text: #131915; }
+  --color-text: #131915;
+}
 
 /*
 Perform basic CSS reset so that every browser displays CSS
@@ -30,24 +31,28 @@ in exactly the same way
   padding: 0;
   /* box-sizing by default is not inherited, so force it to be inherited */
   /* i.e. all child elements with the box-sizing property will now inherit from this */
-  box-sizing: inherit; }
+  box-sizing: inherit;
+}
 
 html {
   /* This assigned root font size will allow the usage of the rem unit */
   /* The rem unit is used to define children element padding/font sizes */
   /* Default font size is 16px so set it to 10px (62.5% of 16px) for easy calculations */
   /* (1 rem == 10px) */
-  font-size: 62.5%; }
+  font-size: 62.5%;
+}
 
 body {
   box-sizing: border-box;
-  background-color: var(--color-background); }
+  background-color: var(--color-background);
+}
 
 body {
   font-family: "Hind Siliguri", sans-serif;
   font-weight: 400;
   font-size: 2rem;
-  color: var(--color-text); }
+  color: var(--color-text);
+}
 
 h1,
 h2,
@@ -55,71 +60,87 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Montserrat", sans-serif; }
-  h1.underline-hover,
-  h2.underline-hover,
-  h3.underline-hover,
-  h4.underline-hover,
-  h5.underline-hover,
-  h6.underline-hover {
-    display: inline;
-    background-image: linear-gradient(var(--color-background), var(--color-background)), linear-gradient(var(--color-text), var(--color-text));
-    background-size: 100% 10%, 0 10%;
-    background-position: 100% 100%, 0 100%;
-    background-repeat: no-repeat, no-repeat;
-    transition: background-size 0.2s; }
-    h1.underline-hover:hover,
-    h2.underline-hover:hover,
-    h3.underline-hover:hover,
-    h4.underline-hover:hover,
-    h5.underline-hover:hover,
-    h6.underline-hover:hover {
-      background-size: 0 10%, 100% 10%; }
+  font-family: "Montserrat", sans-serif;
+}
+h1.underline-hover,
+h2.underline-hover,
+h3.underline-hover,
+h4.underline-hover,
+h5.underline-hover,
+h6.underline-hover {
+  display: inline;
+  background-image: linear-gradient(var(--color-background), var(--color-background)), linear-gradient(var(--color-text), var(--color-text));
+  background-size: 100% 10%, 0 10%;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat, no-repeat;
+  transition: background-size 0.2s;
+}
+h1.underline-hover:hover,
+h2.underline-hover:hover,
+h3.underline-hover:hover,
+h4.underline-hover:hover,
+h5.underline-hover:hover,
+h6.underline-hover:hover {
+  background-size: 0 10%, 100% 10%;
+}
 
 h1 {
-  font-size: 10rem; }
+  font-size: 10rem;
+}
 
 h2 {
-  font-size: 4rem; }
+  font-size: 4rem;
+}
 
 a:link {
   color: var(--color-text);
-  text-decoration: none; }
-
+  text-decoration: none;
+}
 a:visited {
-  color: var(--color-tertiary); }
-
+  color: var(--color-tertiary);
+}
 a:hover {
-  text-decoration: underline; }
-
+  text-decoration: underline;
+}
 a.inverted:link {
-  color: var(--color-background); }
+  color: var(--color-background);
+}
 
 ul {
-  list-style-position: inside; }
+  list-style-position: inside;
+}
 
 header {
-  padding: 0 2rem; }
-  header .flex .contact-link:not(:last-child) {
-    margin-right: 1rem; }
+  padding: 0 2rem;
+}
+header .flex .contact-link:not(:last-child) {
+  margin-right: 1rem;
+}
 
 main section {
   margin: 3rem 0;
-  padding: 0 2rem; }
+  padding: 0 2rem;
+}
 
 .description {
-  margin: 1rem 0; }
+  margin: 1rem 0;
+}
 
 .flex {
-  display: flex; }
-  .flex.column {
-    flex-direction: column; }
-  .flex.wrap {
-    flex-wrap: wrap; }
-  .flex.space-between {
-    justify-content: space-evenly; }
-  .flex.horizontal-center {
-    justify-content: center; }
+  display: flex;
+}
+.flex.column {
+  flex-direction: column;
+}
+.flex.wrap {
+  flex-wrap: wrap;
+}
+.flex.space-between {
+  justify-content: space-evenly;
+}
+.flex.horizontal-center {
+  justify-content: center;
+}
 
 .card {
   width: 40rem;
@@ -129,54 +150,71 @@ main section {
   margin-top: 1rem;
   margin-bottom: 1rem;
   padding: 1rem 2rem;
-  transition: transform 0.2s; }
-  .flex .card:not(:last-child) {
-    margin-right: 1rem; }
-  .card:hover {
-    transform: translateY(-1rem); }
-    .card:hover .title a .project-link,
-    .card:hover .card-footer a .project-link {
-      width: 2rem;
-      height: 2rem; }
-  .card .project-link {
-    width: 0;
-    height: 0;
-    fill: var(--color-background);
-    transition: all 0.2s; }
-  .card .title {
-    font-weight: 700; }
-  .card .description {
-    color: var(--color-secondary);
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical; }
-  .card .flex .badge {
-    margin-top: 1rem; }
-    .card .flex .badge:not(:last-child) {
-      margin-right: 1rem; }
-  .card-footer {
-    display: flex;
-    justify-content: flex-end; }
+  transition: transform 0.2s;
+}
+.flex .card:not(:last-child) {
+  margin-right: 1rem;
+}
+.card:hover {
+  transform: translateY(-1rem);
+}
+.card:hover .title a .project-link,
+.card:hover .card-footer a .project-link {
+  width: 2rem;
+  height: 2rem;
+}
+.card .project-link {
+  width: 0;
+  height: 0;
+  fill: var(--color-background);
+  transition: all 0.2s;
+}
+.card .title {
+  font-weight: 700;
+}
+.card .description {
+  color: var(--color-secondary);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.card .flex .badge {
+  margin-top: 1rem;
+}
+.card .flex .badge:not(:last-child) {
+  margin-right: 1rem;
+}
+.card-footer {
+  display: flex;
+  justify-content: flex-end;
+}
 
 .icon {
   width: 3rem;
   height: 3rem;
   max-width: 3rem;
   max-height: 3rem;
-  fill: var(--color-background); }
-  .icon.medium {
-    width: 5rem;
-    height: 5rem;
-    max-width: 5rem;
-    max-height: 5rem; }
-  .icon.large {
-    width: 7rem;
-    height: 7rem;
-    max-width: 7rem;
-    max-height: 7rem; }
-  .icon.inverted {
-    fill: var(--color-text); }
+  fill: var(--color-background);
+}
+.icon.medium {
+  width: 5rem;
+  height: 5rem;
+  max-width: 5rem;
+  max-height: 5rem;
+}
+.icon.large {
+  width: 7rem;
+  height: 7rem;
+  max-width: 7rem;
+  max-height: 7rem;
+}
+.icon.inverted {
+  fill: var(--color-text);
+}
 
 .pin {
-  display: inline-block; }
+  display: inline-block;
+}
+
+/*# sourceMappingURL=style.css.map */
