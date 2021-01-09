@@ -143,6 +143,8 @@ main section {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   width: 40rem;
   color: var(--color-background);
   background-color: var(--color-text);
@@ -188,6 +190,7 @@ main section {
 .card-footer {
   display: flex;
   justify-content: flex-end;
+  margin-top: auto;
 }
 
 .icon {
