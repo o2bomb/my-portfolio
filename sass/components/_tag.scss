@@ -1,0 +1,8 @@
+.tag {
+    display: inline-block;
+    &:not(:last-child)::after {
+        display: "inline";
+        content: "•";
+        margin: 0 .5rem;
+    }
+}
